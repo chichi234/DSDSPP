@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/relay1_toggle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/relay_margin_ver"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/relay1_lable"
+            style="@style/relay_text"
+            android:text="@string/Relay1" />
+
+        <RadioButton
+            android:id="@+id/relay1_open"
+            style="@style/relay_open"/>
+
+        <RadioButton
+            android:id="@+id/relay1_close"
+            style="@style/relay_close"/>
+
+        <!--<ToggleButton
+            android:id="@+id/relay1_toggle"
+            style="@style/toggleBtn" />-->
+
+    </RadioGroup>
+
+
+    <RadioGroup
+        android:id="@+id/relay2_toggle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/relay_margin_ver"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/relay2_lable"
+            style="@style/relay_text"
+            android:text="@string/Relay2" />
+
+        <!--<ToggleButton
+            android:id="@+id/relay2_toggle"
+            style="@style/toggleBtn" />-->
+
+        <RadioButton
+            android:id="@+id/relay2_open"
+            style="@style/relay_open"/>
+
+        <RadioButton
+            android:id="@+id/relay2_close"
+            style="@style/relay_close"/>
+
+    </RadioGroup>
+
+
+    <RadioGroup
+        android:id="@+id/relay3_toggle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/relay_margin_ver"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/relay3_lable"
+            style="@style/relay_text"
+            android:text="@string/Relay3" />
+
+       <!-- <ToggleButton
+            android:id="@+id/relay3_toggle"
+            style="@style/toggleBtn" />-->
+
+        <RadioButton
+            android:id="@+id/relay3_open"
+            style="@style/relay_open"/>
+
+        <RadioButton
+            android:id="@+id/relay3_close"
+            style="@style/relay_close"/>
+
+    </RadioGroup>
+
+
+    <RadioGroup
+        android:id="@+id/relay4_toggle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/relay_margin_ver"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/relay4_lable"
+            style="@style/relay_text"
+            android:text="@string/Relay4" />
+
+        <!--<ToggleButton
+            android:id="@+id/relay4_toggle"
+            style="@style/toggleBtn" />-->
+
+        <RadioButton
+            android:id="@+id/relay4_open"
+            style="@style/relay_open"/>
+
+        <RadioButton
+            android:id="@+id/relay4_close"
+            style="@style/relay_close"/>
+
+    </RadioGroup>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/relayAll_on"
+            style="@style/btn"
+            android:layout_marginEnd="@dimen/relay_margin"
+            android:layout_marginRight="@dimen/relay_margin"
+            android:text="@string/Relay_all_on" />
+
+        <Button
+            android:id="@+id/relayAll_off"
+            style="@style/btn"
+            android:text="@string/Relay_all_off" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

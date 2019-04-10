@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <RadioGroup
+        android:id="@+id/main_tab"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary"
+        android:layout_height="@dimen/main_tab_height"
+        android:gravity="center"
+        android:checkedButton="@id/devices"
+        android:paddingTop="7.5dp">
+
+
+        <RadioButton
+            android:id="@+id/devices"
+            style="@style/main_tab_btn"
+            android:drawableTop="@drawable/bluetooth"/>
+<!-- android:text="@string/device"
+ android:text="@string/settings"
+ android:text="@string/about"
+ -->
+        <RadioButton
+            android:id="@+id/settings"
+            style="@style/main_tab_btn"
+            android:drawableTop="@drawable/settings"
+            android:visibility="gone"/>
+
+        <RadioButton
+            android:id="@+id/about"
+            style="@style/main_tab_btn"
+            android:drawableTop="@drawable/info_point"/>
+
+    </RadioGroup>
+
+</LinearLayout>

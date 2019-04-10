@@ -1,0 +1,123 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Holo.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="main_tab_btn">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/text_white</item>
+        <item name="android:drawablePadding">0dp</item>
+    </style>
+
+    <style name="BtnStyle">
+        <item name="android:background">@drawable/btn_bg</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="SrollText">
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:scrollbarStyle">insideOverlay</item>
+        <item name="android:scrollbarFadeDuration">500</item>
+        <item name="android:background">@drawable/edit_bg</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:gravity">bottom|left</item>
+    </style>
+
+
+    <style name="ScannerSubtitle">
+        <item name="android:textColor">@android:color/holo_blue_light</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="radioBtn">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:button">@null</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:drawableLeft">@drawable/radio_bg</item>
+        <item name="android:drawablePadding">5dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+    </style>
+
+    <style name="toggleBtn">
+        <item name="android:button">@drawable/toggle_btn</item>
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:background">@null</item>
+        <item name="android:textOff">""</item>
+        <item name="android:textOn">""</item>
+    </style>
+
+    <style name="btn">
+        <item name="android:background">@drawable/btn_bg</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:paddingStart">6dp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingBottom">2dp</item>
+        <item name="android:paddingEnd">6dp</item>
+        <item name="android:layout_height">30dp</item>
+    </style>
+
+    <style name="relay_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">@dimen/relay_margin1</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="relay_open">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">4dp</item>
+        <item name="android:text">@string/relay_open</item>
+    </style>
+
+    <style name="relay_close">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">@string/relay_close</item>
+    </style>
+
+    <style name="beacon_spinner">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="becon_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="beacon_long_btn" parent="btn">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">40dp</item>
+    </style>
+
+    <style name="edittext">
+        <item name="android:background">@drawable/edit_bg</item>
+    </style>
+
+    <style name="chect_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@android:color/holo_red_light</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="DialogTheme" parent="@android:style/Theme.Holo.Light.Dialog.NoActionBar">
+        <!--<item name="android:windowBackground">@android:color/transparent</item>-->
+        <item name="android:windowNoTitle">true</item>
+    </style>
+</resources>

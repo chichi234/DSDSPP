@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f3f3f5"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/colorPrimary"
+        android:paddingTop="@dimen/title_padding"
+        android:paddingEnd="@dimen/title_padding"
+        android:paddingRight="@dimen/title_padding"
+        android:paddingBottom="@dimen/title_padding">
+
+        <TextView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:paddingEnd="@dimen/title_padding"
+            android:paddingRight="@dimen/title_padding"
+            android:paddingLeft="@dimen/title_padding"
+            android:paddingStart="@dimen/title_padding"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:onClick="close"
+            android:drawableLeft="@drawable/back"
+            android:textColor="@color/text_white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/act_connect_device_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/back"
+            android:layout_toStartOf="@id/connect_btn"
+            android:layout_toRightOf="@id/back"
+            android:layout_toLeftOf="@id/back"
+            android:lines="1"
+            android:ellipsize="end"
+            android:layout_marginEnd="@dimen/title_padding"
+            android:layout_marginRight="@dimen/title_padding"
+            android:layout_marginLeft="@dimen/title_padding"
+            android:layout_marginStart="@dimen/title_padding"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/connect_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@string/conn"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/alert_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/warnning">
+
+        <ProgressBar
+            android:id="@+id/alert_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp" />
+
+        <TextView
+            android:id="@+id/alert_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/alert_progress"
+            android:layout_toRightOf="@id/alert_progress" />
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/data_send_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:checkedButton="@id/log">
+
+        <RadioButton
+            android:id="@+id/log"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/SendRec"
+            android:textColor="@color/tab_text_color"
+
+            android:drawableBottom="@drawable/radio_btn_bottom"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/relay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/Relay"
+            android:textColor="@color/tab_text_color"
+            android:drawableBottom="@drawable/radio_btn_bottom"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/beacon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/beacon"
+            android:textColor="@color/tab_text_color"
+            android:drawableBottom="@drawable/radio_btn_bottom"
+            android:textSize="18sp"
+            android:visibility="gone"/>
+
+
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

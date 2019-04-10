@@ -1,0 +1,238 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f3f3f5"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin">
+
+    <!--<TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/write"
+        android:visibility="gone" />-->
+
+   <!-- <TextView
+        android:id="@+id/write"
+        style="@style/SrollText"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone" />-->
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:layout_marginTop="5dp"
+    android:orientation="horizontal">
+    <TextView
+        android:id="@+id/rx_lable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/title_padding"
+        android:layout_marginEnd="@dimen/title_padding"
+        android:layout_centerVertical="true"
+        android:text="@string/hex_rx" />
+    <!--<ToggleButton
+        android:id="@+id/toggle_rx"
+        style="@style/toggleBtn"
+        android:layout_toEndOf="@id/rx_lable" />-->
+
+    <RadioGroup
+        android:id="@+id/toggle_rx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_toEndOf="@id/rx_lable"
+        android:checkedButton="@id/rx_close">
+
+        <RadioButton
+            android:id="@+id/rx_open"
+            style="@style/relay_open"/>
+
+        <RadioButton
+            android:id="@+id/rx_close"
+            style="@style/relay_close"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/clear"
+        style="@style/btn"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="@string/clear"/>
+</RelativeLayout>
+    <TextView
+        android:id="@+id/read"
+        style="@style/SrollText"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:focusable="true"
+        android:gravity="left|top"
+        android:focusableInTouchMode="true"
+        android:layout_weight="2" >
+        <requestFocus />
+    </TextView>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/sendContent"
+            style="@style/SrollText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/send"
+                android:layout_alignParentBottom="true"
+                style="@style/btn"
+                android:onClick="send"
+                android:text="@string/send" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hex_tx"/>
+
+            <!--<ToggleButton
+                android:id="@+id/toggle_tx"
+                android:layout_gravity="end|right"
+                style="@style/toggleBtn"/>-->
+
+            <RadioGroup
+                android:id="@+id/toggle_tx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:checkedButton="@id/tx_close">
+
+                <RadioButton
+                    android:id="@+id/tx_open"
+                    style="@style/relay_open"/>
+
+                <RadioButton
+                    android:id="@+id/tx_close"
+                    style="@style/relay_close"/>
+            </RadioGroup>
+<!--
+            <RadioGroup
+                android:id="@+id/sendType"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/send"
+                android:checkedButton="@+id/hex"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/hex"
+                    style="@style/radioBtn"
+                    android:text="@string/hex" />
+
+                <RadioButton
+                    android:id="@+id/string"
+                    style="@style/radioBtn"
+                    android:text="@string/string" />
+            </RadioGroup>-->
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/repeat_interval"
+            android:layout_width="80dp"
+            style="@style/edittext"
+            android:inputType="number"
+            android:selectAllOnFocus="true"
+            android:layout_centerVertical="true"
+            android:layout_height="30dp" />
+
+        <TextView
+            android:id="@+id/repeat_interval_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="@string/ms"
+            android:layout_toRightOf="@id/repeat_interval"
+            android:layout_toEndOf="@id/repeat_interval"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/relay_margin"
+            android:layout_marginRight="@dimen/relay_margin"/>
+
+        <CheckBox
+            android:id="@+id/toggle_auto_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/repeat_interval_unit"
+            android:text="@string/auto_send"/>
+
+       <!-- <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="@string/auto_send"
+            android:layout_marginRight="@dimen/title_padding"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/toggle_auto_send"
+            android:layout_toLeftOf="@id/toggle_auto_send"
+            android:layout_marginEnd="@dimen/title_padding"/>-->
+
+        <!--<ToggleButton
+            android:id="@+id/toggle_auto_send"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            style="@style/toggleBtn" />-->
+
+       <!-- <Button
+            android:id="@+id/conn"
+            style="@style/BtnStyle"
+            android:onClick="conn"
+            android:text="@string/conn" />
+
+        <Button
+            android:id="@+id/clear"
+            style="@style/BtnStyle"
+            android:onClick="clearLog"
+            android:text="@string/clear" />
+
+
+        <Button
+            android:id="@+id/exit"
+            style="@style/BtnStyle"
+            android:onClick="exit"
+            android:text="@string/exit" />
+
+        <Button
+            android:id="@+id/setting"
+            style="@style/BtnStyle"
+            android:onClick="setting"
+            android:text="@string/setting" />-->
+    </RelativeLayout>
+
+
+</LinearLayout>
