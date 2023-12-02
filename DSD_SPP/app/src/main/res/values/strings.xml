@@ -83,9 +83,9 @@
     <string name="auto_send">Auto Send</string>
 
     <string name="auto_send_interval_error">Auto send interval error! </string>
-    <string name="web_set">Website: http://www.dsdtech-global.com</string>
-    <string name="support">Support:dsdtech@163.com</string>
-    <string name="sales">Sales:info@dsdtech-global.com</string>
+    <string name="web_set">Website: http://www.deshide.com</string>
+    <string name="support">DSD TECH Bluetooth V1.5 (2023-5-31)</string>
+    <string name="sales">Email:dsdtech@163.com</string>
     <string name="contact">Any question about DSD TECH brand products, please feel free to contact us!</string>
     <string name="about_us">About US</string>
     <string name="connect_failed">Failed to connect Bluetooth device, please try again!</string>

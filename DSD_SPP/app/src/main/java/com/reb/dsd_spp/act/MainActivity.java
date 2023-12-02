@@ -4,12 +4,15 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothManager;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import com.reb.bluetooth.util.BluetoothUtil;
 import com.reb.dsd_spp.R;
 import com.reb.dsd_spp.base.BaseFragment;
 import com.reb.dsd_spp.frag.AboutFragment;
@@ -28,7 +31,9 @@ public class MainActivity extends BaseFragmentActivity {
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        showBLEDialog();
+        if(BluetoothUtil.requirScanPermission(this,  1)) {
+            showBLEDialog();
+        }
         setContentView(R.layout.activity_main);
         initView();
         initFragment(savedInstanceState);
@@ -98,5 +103,19 @@ public class MainActivity extends BaseFragmentActivity {
     public void showBLEDialog() {
         final Intent enableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
         startActivityForResult(enableIntent, REQUEST_ENABLE_BT);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == 1) {
+            for (int result : grantResults) {
+                if (result == PackageManager.PERMISSION_DENIED) {
+                    Toast.makeText(this, "Permission Denied!", Toast.LENGTH_SHORT).show();
+                    finish();
+                    return;
+                }
+            }
+        }
     }
 }
